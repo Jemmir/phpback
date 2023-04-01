@@ -9,7 +9,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 
 ?>
 <?php include "conexion.php";?>
-<?php include "login.php";?>
+
 
 <?php 
 Configuration::instance([

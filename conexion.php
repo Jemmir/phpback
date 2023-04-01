@@ -2,9 +2,8 @@
 use Cloudinary\Api\Upload\UploadApi;
 class conexion{
     private $servidor ="localhost";
-    private $usuario="id20540344_jemmir";
-    private $nombre="d20540344_prueba";
-    private $password="Q/aa|-TeVC^!81N{";
+    private $usuario="root";
+    private $password="";
     private $conexion;
     public $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -15,7 +14,7 @@ class conexion{
 
     public function __construct(){
         try{
-            $this->conexion= new PDO("mysql:host=$this->servidor;dbname=$nombre", $this->usuario, $this->password, $this->options);
+            $this->conexion= new PDO("mysql:host=$this->servidor;dbname=album", $this->usuario, $this->password, $this->options);
           
         }catch(PDOException $e){
             return "falla de conexion".$e;
